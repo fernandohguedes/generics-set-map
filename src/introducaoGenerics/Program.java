@@ -1,3 +1,7 @@
+package introducaoGenerics;
+
+import introducaoGenerics.PrintService;
+
 import java.util.Scanner;
 
 public class Program {
