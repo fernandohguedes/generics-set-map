@@ -26,7 +26,7 @@ String name = list.get(0);
 ----------
 <h2>Set</h2>
 - Representa um conjunto de elementos (similar ao da Àlgebra)
-  - Não admite repetições;
+  - Não admite repetições;  
   - Elementos não possuem posição;
   - Acessp, inserção e remoção de elementos são rápidos;
   - Oferece operações eficients de conjunto: interseção, unição, diferença;
