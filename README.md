@@ -30,7 +30,7 @@ String name = list.get(0);
   - Elementos não possuem posição;
   - Acessp, inserção e remoção de elementos são rápidos;
   - Oferece operações eficients de conjunto: interseção, unição, diferença;
-  - Principais implementações:
+  - Principais implementações
     - **HashSet** - mais rápido (operações **0(1)** em tabela hash) e não ordenado;
     - **TreeSet** - mais lento (operações **0(log(n)**) em árvore rubro-negra) e ordenação pelo **compareTo** do objeto (ou **Comparator**);
     - **LinkedHashSet** - velocidade intermediária e elementos na ordem em que são adicionados;
