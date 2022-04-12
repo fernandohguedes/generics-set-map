@@ -35,7 +35,7 @@ String name = list.get(0);
     - **TreeSet** - mais lento (operações **0(log(n)**) em árvore rubro-negra) e ordenação pelo **compareTo** do objeto (ou **Comparator**);
     - **LinkedHashSet** - velocidade intermediária e elementos na ordem em que são adicionados;
 
-####Alguns métodos importantes
+###Alguns métodos importantes
 ~~~~~java 
 add(obj);
 remove(obj);
@@ -65,3 +65,13 @@ retainAll(other);
 removeAll(other); 
 ~~~~
 - **diferença**: remove do conjunto os elementos contidos em other;
+
+
+###Verificação de Igualdade no conjunto Set
+
+- Se hashCode e equals estiverem implementados:
+  - Primeiro é comparado pelo hashCode, se der igual utiliza o equals para confirmar;
+  - Lembrando: String, Integer, Double, Etc. Já possuem equals e hashCode;
+
+- Se hashCode e equals NÃO estiverem implementados:
+  - A comparação das referências é feito por ponteiro de memória aonde os objetos foram alocados;
