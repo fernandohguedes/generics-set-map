@@ -1,14 +1,13 @@
-package introducaoInterfaceSet.exercios;
+package introducaoInterfaceSet.exercicios;
 
-import java.time.LocalDateTime;
-import java.util.Objects;
+import java.util.Date;
 
 public class LogUser {
 
 	private String name;
-	private LocalDateTime timeStamp;
+	private Date timeStamp;
 
-	public LogUser(String name, LocalDateTime timeStamp) {
+	public LogUser(String name, Date timeStamp) {
 		this.name = name;
 		this.timeStamp = timeStamp;
 	}
@@ -21,25 +20,27 @@ public class LogUser {
 		this.name = name;
 	}
 
-	public LocalDateTime getTimeStamp() {
+	public Date getTimeStamp() {
 		return timeStamp;
 	}
 
-	public void setTimeStamp(LocalDateTime timeStamp) {
+	public void setTimeStamp(Date timeStamp) {
 		this.timeStamp = timeStamp;
 	}
 
 	@Override
 	public boolean equals(Object o) {
 		if (this == o) return true;
-		if (o == null || getClass() != o.getClass()) return false;
+		if (!(o instanceof LogUser)) return false;
+
 		LogUser logUser = (LogUser) o;
-		return Objects.equals(name, logUser.name) && Objects.equals(timeStamp, logUser.timeStamp);
+
+		return name != null ? name.equals(logUser.name) : logUser.name == null;
 	}
 
 	@Override
 	public int hashCode() {
-		return Objects.hash(name, timeStamp);
+		return name != null ? name.hashCode() : 0;
 	}
 
 	@Override
